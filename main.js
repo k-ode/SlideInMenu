@@ -5,6 +5,10 @@ var SlideInMenu = function () {
         { name: 'Menu 3' },
         { name: 'Menu 4' }
     ]);
+
+    this.deleteMenuItem = function (menuItem) {
+        this.menuItems.remove(menuItem);
+    }.bind(this);
 };
 
 ko.bindingHandlers.menuSlider = {

@@ -25,7 +25,7 @@
                             <span data-bind="text: name"></span><i class="show-delete fa fa-trash-o fa-fw pull-right"></i>
                         </a>
                         <div class="delete">
-                            <span class="delete-text">Delete</span><i class="fa fa-trash-o fa-fw"></i>
+                            <span class="delete-text">Delete</span><i data-bind="click: $parent.deleteMenuItem" class="fa fa-trash-o fa-fw"></i>
                         </div>
                     </li>
                     <!-- /ko -->
