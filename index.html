@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="screen.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <title>Slide in menu</title>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <ul class="menu nav nav-pills nav-stacked">
+                    <!-- ko foreach: menuItems -->
+                    <li data-bind="menuSlider: { animateCls: 'open', animateEl: '.delete', clickEl: '.show-delete' }">
+                        <a href="#">
+                            <span data-bind="text: name"></span><i class="show-delete fa fa-trash-o fa-fw pull-right"></i>
+                        </a>
+                        <div class="delete">
+                            <span class="delete-text">Delete</span><i class="fa fa-trash-o fa-fw"></i>
+                        </div>
+                    </li>
+                    <!-- /ko -->
+                </ul>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
